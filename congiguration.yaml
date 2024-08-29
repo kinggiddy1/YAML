@@ -1,0 +1,36 @@
+# Application configuration file
+app:
+  name: My Web App
+  version: 1.0.0
+
+server:
+  host: localhost
+  port: 8080
+  protocol: https
+  ssl:
+    enabled: true
+    certificate: /etc/ssl/certs/myapp-cert.pem
+    key: /etc/ssl/private/myapp-key.pem
+
+database:
+  host: db.example.com
+  port: 5432
+  name: myapp_db
+  user: dbuser
+  password: secret_password
+
+logging:
+  level: info
+  file: /var/log/myapp.log
+
+features:
+  user_authentication: true
+  caching: true
+  analytics: false
+
+# List of admin users
+admins:
+  - name: Alice
+    email: alice@example.com
+  - name: Bob
+    email: bob@example.com
